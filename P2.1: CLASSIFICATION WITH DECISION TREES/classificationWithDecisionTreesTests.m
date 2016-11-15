@@ -2,15 +2,6 @@ function tests = classificationWithDecisionTreesTests
     tests = functiontests(localfunctions);
 end
 
-%% Test: learnDecisionTree
-function learnDecisionTreeTest(testCase)
-    %inputs:  M (matrix), v(classification vector)
-    %process: Splits input via the classification repeatedly
-    %outputs: Constructs a data structure appriopriate for representing
-    
-    
-end
-
 %% Test: split
 function splitTest(testCase)
     %input:   S (set), varIdx (column), threshold (value to compare)

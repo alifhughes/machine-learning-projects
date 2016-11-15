@@ -49,6 +49,10 @@ function [updatedSet, setRule] = maxSplit(S)
             % Loop through all possible values
             for i = 1:thresholdColumnCount
                 
+                if (thresholds(i) == 1.9)
+                    disp('h');
+                end
+                
                 % Make the split on the set with the variable and threshold
                 % value
                 [S1, S2] = split(currentSet, varIdx, thresholds(i));

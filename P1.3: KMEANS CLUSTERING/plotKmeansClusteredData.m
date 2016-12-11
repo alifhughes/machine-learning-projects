@@ -7,31 +7,33 @@ function plotKmeansClusteredData
     trainingDataset = [dataNormal1 dataNormal2];   
     
     % Initalise k
-    K = 2;
+    K = 3;
     
     % Call k means to get the clusters
-    [cluster1, cluster2] = kmeansFirstPrinciple(K, trainingDataset);
+    [trainingDataset, clusterMeans] = kmeansFirstPrinciple(K, trainingDataset);
     
     figure;
-    
-    % Create the size of the cirlces to be plotted
-    circleSize = 15;
 
-    % Plot the data dimension against eachother to get a 2D scatter plot
-    % for data set 1
-    scatter(cluster1(1, :), cluster1(2, :), circleSize, 'b', 'filled');
+    % Iterate each cluster
+    for cluster = 1:K
+
+        % Get all values that belong to the cluster
+        currentCluster = trainingDataset(3, :) == cluster;
+        currentCluster = trainingDataset(:, currentCluster);
+            
+        % Plot the data dimension against eachother to get a 2D scatter plot
+        % for current cluster
+        plot(currentCluster(1, :), currentCluster(2, :), '.');
+        
+        hold on;
     
-    hold on;
-    
-    % Plot the data dimension against eachother to get a 2D scatter plot
-    % for data set 2
-    scatter(cluster2(1, :), cluster2(2, :), circleSize, 'r', 'filled');
-    
+    end
+
     % Format the graph
     title('2D raw data plot');
     xlabel('y-value');
     ylabel('x-value');
-    legend('cluster 1', 'cluster 2');
+    %legend('cluster 1', 'cluster 2');
     
 end
 

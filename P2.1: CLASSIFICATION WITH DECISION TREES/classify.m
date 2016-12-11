@@ -1,7 +1,4 @@
 function classification = classify(decisionTree, sampleDataVector)
-    % reutrn a class name that the decision tree rules decide it should go
-    % into
-    % make the journey down the tree until it arrives at the right node
 
     % Iterate each rule
     for i = 1:size(decisionTree, 1)

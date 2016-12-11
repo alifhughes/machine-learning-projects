@@ -1,5 +1,5 @@
 % Returns the next state based on an action and state
-function nextState = deterministicTransitionFunction(state, action)
+function nextState = transition(state, action)
 
     % Create the environment
     environment = [
@@ -20,4 +20,3 @@ function nextState = deterministicTransitionFunction(state, action)
     nextState = environment(state, action);
 
 end
-

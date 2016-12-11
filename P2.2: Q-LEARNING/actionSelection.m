@@ -7,7 +7,7 @@ function action = actionSelection(qTable, state)
     % Get random number between 1 and 10
     randomNumber = randi([1 10]);
 
-    % Cheack if random number greater than or equal to .9
+    % Check if number is equal to 10
     if randomNumber == 10
 
         % Choose random number between 

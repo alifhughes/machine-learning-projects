@@ -83,27 +83,6 @@ function getRewardTest(testcase)
     
 end
 
-%% Test: actionSelection
-function actionSelectionTest(testcase)
-
-    % Initialise dummy qTable
-    qTable = [0.1 0.2 0.3 0.4;
-              0.1 0.2 0.3 0.4];
-          
-    % Initialise state
-    state = 1;
-
-    % Get the action
-    action = actionSelection(qTable, state);
-    
-    % Initialise expected action
-    expectedAction = 4;
-    
-    % Assert that they're equal !!Will work 90% of the time!!
-    assert(isequal(action, expectedAction));
-    
-end
-
 %% Test: initQ
 function initQTest(testcase)
     
@@ -127,13 +106,21 @@ function initQTest(testcase)
         % Get the max value of the row
         maxRowValue = max(initQTable(i, :));
         
+        % Get the min value of the row
+        minRowValue = min(initQTable(i, :));
+        
         % Check if the maximum value of the row is above one
         if maxRowValue > 0.1
-            % Value is above 1
+            % Value is above 0.1
             
             % Set the flag
             valueAbove1Flag = true;
 
+        elseif minRowValue < 0.01
+            % Value is below 0.01
+            
+            % Set the flag
+            valueAbove1Flag = true;
         end
 
     end

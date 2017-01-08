@@ -8,12 +8,10 @@ function generateDataset
     % Generate 2-cluster Gaussian datasets
     [trainingData, trainingTarget] = GenerateGaussianData(trainingSamples);
     [testingData, testingTarget] = GenerateGaussianData(testingSamples);
-
-    figure;
     
     % Plot the data dimension against eachother to get a 2D scatter plot
     % for data set 1
-    gscatter(trainingData(1, :), trainingData(2, :), {trainingTarget(1, :), trainingTarget(2, :)}, 'br','..');
+    gscatter(trainingData(1, :), trainingData(2, :), {trainingTarget(1, :), trainingTarget(2, :)}, 'br','+.');
 
     % Format the graph
     title('2D raw data plot');

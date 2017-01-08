@@ -4,7 +4,7 @@ function action = NSMSelectAction(LTM, STM, currentObservation)
     randomNumber = randi([1 10]);
     
     % Set k for KNearest function
-    K = 10;
+    K = 4;
 
     % Get the last step of the episode from the first epsiode of the LTM
     finalStep = LTM(20, :, 1);

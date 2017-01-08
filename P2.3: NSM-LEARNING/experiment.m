@@ -7,10 +7,10 @@ function experiment
     standardDeviationOfTrials = zeros(1, 50);
 
     % Initialise a matrix to hold all steps across all trials
-    trialStepMatrix = zeros(10, 50);
+    trialStepMatrix = zeros(100, 50);
 
     % Iterate 100 trials
-    for i = 1:10
+    for i = 1:100
 
         % Run the for 50 episodes
         [numOfStepsMatrix, LTM] = NSMTrial(50);
@@ -36,7 +36,7 @@ function experiment
     
     figure;
 
-    % Plot the mean and standard deviation of each episode count for 500
+    % Plot the mean and standard deviation of each episode count for 100
     % trials
     shadedErrorBar(x, meanOfTrials, standardDeviationOfTrials, 'black');
     title('Mean and standard deviation of NSM-Learning performance over 100 trials');

@@ -123,87 +123,11 @@ function proximityTest(testcase)
     
     % Get actual values from proximity
     [actualProximity, actualLTMStep] = proximity(LTM, 1, 20, STM, 10);
-    
-    % FLESH OUT TEST WITH EDGE CASES
-    
+
     % Assert proximities are the same
     assert(isequal(actualProximity, expectedProximity));
     
     % Assert LTM steps are the same
     assert(isequal(actualLTMStep, expectedLTMStep));
-    
-end
-
-%% Test: KNearest
-function KNearestTest(testcase)
-    
-    % Initialise LTM
-%     LTM = [0         0         0;
-%            0         0         0;
-%            0         0         0;
-%            0         0         0;
-%            0         0         0;
-%            0         0         0;
-%            0         0         0;
-%            0         0         0;
-%            0         0         0;
-%            0         0         0;
-%            0         0         0;
-%            0         0         0;
-%            0         0         0;
-%      10.0000    1.0000    5.3144;
-%       1.0000    3.0000    5.9049;
-%      10.0000    4.0000    6.5610;
-%      10.0000    2.0000    7.2900;
-%             10.0000    2.0000    8.1000;
-%             10.0000    2.0000    9.0000;
-%             10.0000    3.0000   10.0000];
- 
-    LTM = [0         0         0;
-                  0         0         0;
-                  0         0         0;
-                  0         0         0;
-                  0         0         0;
-                  0         0         0;
-                  0         0         0;
-                  0         0         0;
-                  0         0         0;
-                  0         0         0;
-                  0         0         0;
-                  0         0         0;
-                  0         0         0;
-            14.0000    3.0000    5.3144;
-            14.0000    3.0000    5.9049;
-            14.0000    3.0000    6.5610;
-            14.0000    3.0000    7.2900;
-            14.0000    3.0000    8.1000;
-            14.0000    3.0000    9.0000;
-            14.0000    3.0000   10.0000];
-        
-     LTM(:,:,2) = [0         0         0;
-                  0         0         0;
-                  0         0         0;
-                  0         0         0;
-                  0         0         0;
-                  0         0         0;
-                  0         0         0;
-                  0         0         0;
-                  0         0         0;
-                  0         0         0;
-                  0         0         0;
-                  0         0         0;
-                  0         0         0;
-            14.0000    3.0000    5.3144;
-            14.0000    3.0000    5.9049;
-            14.0000    3.0000    6.5610;
-            14.0000    3.0000    7.2900;
-            14.0000    3.0000    8.1000;
-            14.0000    3.0000    9.0000;
-            14.0000    3.0000   10.0000];
-        
-    STM = [14.0000    3.0000   1.0];
-    
-    KNearestSteps = KNearest(LTM, 10, 14, STM);
-    
     
 end

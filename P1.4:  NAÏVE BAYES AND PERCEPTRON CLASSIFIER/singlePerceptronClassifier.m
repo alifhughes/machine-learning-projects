@@ -1,10 +1,11 @@
 function singlePerceptronClassifier
     
     % Generate the gaussain data
-    [trainingData, trainingTarget] = GenerateGaussianData(10000);
-    [testingData, testingTarget] = GenerateGaussianData(10000);
+    [trainingData, trainingTarget] = GenerateGaussianData(1000);
+    [testingData, testingTarget] = GenerateGaussianData(100000);
+
     % Initiate learning rate to small number between 0 and 1
-    learningRate = 0.2;
+    learningRate = 0.5;
     
     % Initiate weight vector as empty
     weights = [0, 0, 0];

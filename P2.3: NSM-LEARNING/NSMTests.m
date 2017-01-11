@@ -2,7 +2,7 @@ function tests = NSMTests
     tests = functiontests(localfunctions);
 end
 
-%% Test: deterministicTransitionFunction
+%% Test: observationTest
 function observationTest(testcase)
 
     % Initialise state

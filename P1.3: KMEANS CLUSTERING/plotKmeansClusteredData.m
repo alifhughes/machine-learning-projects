@@ -7,7 +7,7 @@ function plotKmeansClusteredData
     trainingDataset = [dataNormal1 dataNormal2];   
     
     % Initalise k
-    K = 3;
+    K = 2;
     
     % Call k means to get the clusters
     [trainingDataset, clusterMeans] = kmeansFirstPrinciple(K, trainingDataset);

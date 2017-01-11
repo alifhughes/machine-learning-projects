@@ -28,10 +28,5 @@ function initiate
 
         end
     end
-    
-    % Display the classifcation node and the majority plant name in that
-    % node
-    disp(classification);
-    disp(plantName);
 
 end 

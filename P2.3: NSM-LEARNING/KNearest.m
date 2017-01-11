@@ -53,7 +53,6 @@ function KNearestSteps = KNearest(LTM, K, observation, STM)
                         KNearestSteps(index, :) = LTMStep;
 
                     end
-                    
                 else 
                     
                     % Add the current proximity value onto the LTMStep
@@ -61,12 +60,9 @@ function KNearestSteps = KNearest(LTM, K, observation, STM)
                     
                     % Add this LTMStep to the KnearestNeighbours matrix
                     KNearestSteps = [KNearestSteps; LTMStep];
-
                 end
-                
             end
         end
     end
-    
 end
 

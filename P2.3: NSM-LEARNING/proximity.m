@@ -63,15 +63,11 @@ function [proximity, LTMStep] = proximity(LTM, episodeIndex, stepIndex, STM, obs
             % Increment proximity
             proximity = proximity + 1;
             
-
         else 
             % No match
 
             % Terminate function
             return;
-
         end
-
     end
-
 end
